@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOAP x REST e Martin Lawrence</title>
+  <link rel="icon" href="https://github.com/leandrocgsi/blog-images/blob/main/logos/favicon-16x16-1.png?raw=true" sizes="32x32" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #1f2937;
+    }
+
+    header {
+      background-color: #363636;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo img, .stars img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #111827;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .link-button {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .link-button:hover {
+      background-color: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #ffffff;
+      margin-top: 60px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .copyright {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding-top: 30px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-2px);
+    }
+
+    .social-icons img {
+      max-width: 36px;
+      max-height: 36px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="logo">
+      <a href="https://pub.erudio.com.br/meus-cursos">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/cropped-teste_logo-2.png?raw=true" alt="Erudio Training">
+      </a>
+    </div>
+    <div class="stars">
+      <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/five_stars.png?raw=true" alt="Cinco Estrelas">
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>REST vs. SOAP — A Analogia com Martin Lawrence em "Vovó... Zona"</h1>
+
+  <p>REST (Representational State Transfer) e SOAP (Simple Object Access Protocol) são duas abordagens distintas para a criação de APIs e serviços web. Enquanto REST é um estilo arquitetural que utiliza métodos HTTP padrão e formatos de dados flexíveis como JSON e XML, SOAP é um protocolo rigoroso que opera principalmente com XML e requer envelopes específicos para suas mensagens.</p>
+
+  <p>As principais diferenças entre REST e SOAP incluem:</p>
+  <ul>
+    <li><strong>Flexibilidade:</strong> REST permite múltiplos formatos de dados e é mais fácil de integrar com aplicações modernas. SOAP é mais rígido, utilizando exclusivamente XML.</li>
+    <li><strong>Performance:</strong> REST tende a ser mais leve e rápido devido ao seu uso de mensagens menores e suporte a cache. SOAP, por ser mais verboso, pode ser mais lento.</li>
+    <li><strong>Segurança:</strong> SOAP possui padrões de segurança integrados como WS-Security, tornando-o adequado para aplicações que exigem alto nível de segurança. REST depende de protocolos como HTTPS para segurança.</li>
+    <li><strong>Escalabilidade:</strong> REST, por ser sem estado, facilita a escalabilidade horizontal. SOAP, mantendo o estado, pode ser mais complexo de escalar.</li>
+  </ul>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="http://www.erudio.com.br/blog/restful-web-services/" target="_blank" class="link-button">Artigo: RESTful Web Services</a>
+    <a href="https://dzone.com/refcardz/rest-foundations-restful?chapter=1" target="_blank" class="link-button">DZone: Fundamentos do REST</a>
+  </div>
+
+  <p>Uma analogia popular compara REST e SOAP ao ator Martin Lawrence em diferentes contextos. Imagine Martin Lawrence em sua aparência normal: ágil, direto e sem complicações. Isso representa o REST — uma arquitetura leve, baseada em HTTP, fácil de entender e implementar, ideal para aplicações web modernas.</p>
+
+  <p>Agora, pense em Martin Lawrence caracterizado como a Vovó Zona no filme <em>Big Momma's House</em>: com roupas pesadas, maquiagem elaborada e uma persona completamente diferente. Essa versão representa o SOAP — um protocolo mais pesado, com estruturas complexas em XML, exigindo configurações detalhadas e maior sobrecarga.</p>
+
+  <p>Essa analogia surgiu em uma thread do Stack Overflow, onde um usuário explicou as diferenças entre REST e SOAP utilizando essa comparação com Martin Lawrence. A explicação foi tão clara e divertida que se tornou uma referência popular para entender as distinções entre essas duas abordagens.</p>
+
+  <img src="https://i.sstatic.net/GwRYd.jpg" alt="Analogia REST vs SOAP com Martin Lawrence" style="max-width: 100%; height: auto; margin-top: 20px;" />
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="https://stackoverflow.com/questions/209905/representational-state-transfer-rest-and-simple-object-access-protocol-soap" target="_blank" class="link-button">Ver Discussão Original no Stack Overflow</a>
+  </div>
+</main>
+
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@erudiotraining" target="_blank" aria-label="YouTube">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/youtube_logo_min.png?raw=true" alt="YouTube" />
+      </a>
+      <a href="https://www.linkedin.com/company/erudiotraining" target="_blank" aria-label="LinkedIn">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/linkedin_logo_min.png?raw=true" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/leandrocgsi" target="_blank" aria-label="GitHub">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/github_logo_min.png?raw=true" alt="GitHub" />
+      </a>
+      <a href="https://pub.erudio.com.br/meus-cursos" target="_blank" aria-label="Udemy">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/udemy_logo.png?raw=true" alt="Udemy" />
+      </a>
+      <a href="https://www.instagram.com/erudiotraining" target="_blank" aria-label="Instagram">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/instagram.png?raw=true" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/erudiotraining" target="_blank" aria-label="Facebook">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/facebook.png?raw=true" alt="Facebook" />
+      </a>
+      <a href="https://www.threads.net/@erudiotraining" target="_blank" aria-label="Threads">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/threads.png?raw=true" alt="Threads" />
+      </a>
+      <a href="https://www.tiktok.com/@erudiotraining" target="_blank" aria-label="TikTok">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/tiktok.png?raw=true" alt="TikTok" />
+      </a>
+      <a href="https://x.com/erudiotraining" target="_blank" aria-label="X">
+        <img src="https://github.com/leandrocgsi/blog-images/blob/main/logos/twitter.png?raw=true" alt="X (Twitter)" />
+      </a>
+    </div>
+
+    <p id="copyright-text">
+      © Copyright - Erudio Training - 2011-<span id="current-year"></span> - CNPJ: 34.523.711/0001-62 - Todos os Direitos Reservados
+    </p>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>
