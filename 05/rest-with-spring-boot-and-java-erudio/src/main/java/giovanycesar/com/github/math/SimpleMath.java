@@ -1,9 +1,5 @@
 package giovanycesar.com.github.math;
 
-import giovanycesar.com.github.exception.UnsupportedMathOperationException;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 public class SimpleMath {
 
     public Double sum(Double number01, Double number02) {

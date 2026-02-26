@@ -1,11 +1,12 @@
 package giovanycesar.com.github.controllers;
 
-import giovanycesar.com.github.exception.UnsupportedMathOperationException;
-import giovanycesar.com.github.math.SimpleMath;
-import giovanycesar.com.github.request.converters.NumberConverter;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import giovanycesar.com.github.exception.UnsupportedMathOperationException;
+import giovanycesar.com.github.math.SimpleMath;
+import giovanycesar.com.github.request.converters.NumberConverter;
 
 @RestController
 @RequestMapping("/math")
