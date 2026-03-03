@@ -16,7 +16,7 @@ public class PersonServices {
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
 
     public List<Person> findAll() {
-        logger.info("Finding one people.");
+        logger.info("Finding people.");
 
 
         List<Person> persons = new ArrayList<Person>();
