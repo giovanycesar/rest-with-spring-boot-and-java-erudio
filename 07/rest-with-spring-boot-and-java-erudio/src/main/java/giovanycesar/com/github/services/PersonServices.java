@@ -1,14 +1,14 @@
 package giovanycesar.com.github.services;
 
-import giovanycesar.com.github.exception.ResourceNotFoundException;
-import giovanycesar.com.github.model.Person;
-import giovanycesar.com.github.repository.PersonRepository;
+import java.util.List;
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Logger;
+import giovanycesar.com.github.exception.ResourceNotFoundException;
+import giovanycesar.com.github.model.Person;
+import giovanycesar.com.github.repository.PersonRepository;
 
 @Service
 public class PersonServices {
