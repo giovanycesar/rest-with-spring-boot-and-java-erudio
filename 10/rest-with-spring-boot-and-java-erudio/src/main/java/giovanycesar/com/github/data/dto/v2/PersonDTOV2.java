@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-
 public class PersonDTOV2 implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -78,9 +77,12 @@ public class PersonDTOV2 implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass())
+            return false;
         PersonDTOV2 that = (PersonDTOV2) o;
-        return Objects.equals(id, that.id) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(birthDate, that.birthDate) && Objects.equals(address, that.address) && Objects.equals(gender, that.gender);
+        return Objects.equals(id, that.id) && Objects.equals(firstName, that.firstName)
+                && Objects.equals(lastName, that.lastName) && Objects.equals(birthDate, that.birthDate)
+                && Objects.equals(address, that.address) && Objects.equals(gender, that.gender);
     }
 
     @Override
