@@ -32,7 +32,9 @@ public class PersonServices {
     public PersonDTO findById(Long id) {
         logger.info("Finding one person.");
 
-        var entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        var entity = repository
+                .findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
 
         return parseObject(entity, PersonDTO.class);
     }
@@ -49,7 +51,9 @@ public class PersonServices {
     public PersonDTO update(PersonDTO person) {
         logger.info("Updating one person");
 
-        Person entity = repository.findById(person.getId()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        Person entity = repository
+                .findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
 
         entity.setFirstName(person.getFirstName());
         entity.setLastName(person.getLastName());
@@ -62,7 +66,9 @@ public class PersonServices {
     public void delete(Long id) {
         logger.info("Deleting one person.");
 
-        Person entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        Person entity = repository
+                .findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
 
         repository.delete(entity);
     }
