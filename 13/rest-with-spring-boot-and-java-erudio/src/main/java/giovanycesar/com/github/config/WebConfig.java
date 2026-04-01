@@ -28,11 +28,13 @@ public class WebConfig implements WebMvcConfigurer {
 
         // Via Query Param _?mediaType=xml
 
-        configurer.favorParameter(false)
-                  .ignoreAcceptHeader(false)
-                  .useRegisteredExtensionsOnly(false)
-                  .defaultContentType(MediaType.APPLICATION_JSON)
-                  .mediaType("json", MediaType.APPLICATION_JSON)
-                  .mediaType("xml", MediaType.APPLICATION_XML);
+        configurer
+                .favorParameter(false)
+                .ignoreAcceptHeader(false)
+                .useRegisteredExtensionsOnly(false)
+                .defaultContentType(MediaType.APPLICATION_JSON)
+                .mediaType("json", MediaType.APPLICATION_JSON)
+                .mediaType("xml", MediaType.APPLICATION_XML)
+                .mediaType("yaml", MediaType.APPLICATION_YAML);
     }
 }
