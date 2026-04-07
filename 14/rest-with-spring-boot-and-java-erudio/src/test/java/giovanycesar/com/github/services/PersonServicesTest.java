@@ -1,6 +1,7 @@
 package giovanycesar.com.github.services;
 
 import giovanycesar.com.github.data.dto.PersonDTO;
+import giovanycesar.com.github.exception.RequiredObjectIsNullException;
 import giovanycesar.com.github.model.Person;
 import giovanycesar.com.github.repository.PersonRepository;
 import giovanycesar.com.github.unitetests.mapper.mocks.MockPerson;
@@ -123,6 +124,16 @@ class PersonServicesTest {
     }
 
     @Test
+    void testCreateWithNullPerson(){
+     Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> {service.create(null);});
+
+     String expectedMessage = "It is not allowed to be null";
+     String actualMessage = exception.getMessage();
+
+     assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
     void update() {
         Person person = input.mockEntity(1);
         person.setId(1L);
@@ -165,6 +176,16 @@ class PersonServicesTest {
         assertEquals("First Name Test1", result.getFirstName());
         assertEquals("Last Name Test1", result.getLastName());
         assertEquals("Female", result.getGender());
+    }
+
+    @Test
+    void testUpdateWithNullPerson(){
+        Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> {service.update(null);});
+
+        String expectedMessage = "It is not allowed to be null";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
     }
 
     @Test

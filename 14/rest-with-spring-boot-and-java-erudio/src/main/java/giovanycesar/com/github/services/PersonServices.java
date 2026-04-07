@@ -2,6 +2,7 @@ package giovanycesar.com.github.services;
 
 import giovanycesar.com.github.controllers.PersonController;
 import giovanycesar.com.github.data.dto.PersonDTO;
+import giovanycesar.com.github.exception.RequiredObjectIsNullException;
 import giovanycesar.com.github.exception.ResourceNotFoundException;
 import giovanycesar.com.github.model.Person;
 import giovanycesar.com.github.repository.PersonRepository;
@@ -49,6 +50,9 @@ public class PersonServices {
 
 
     public PersonDTO create(PersonDTO person) {
+
+        if (person == null) {throw new RequiredObjectIsNullException();}
+
         logger.info("Creating one person");
 
         var entity = parseObject(person, Person.class);
@@ -61,6 +65,9 @@ public class PersonServices {
     }
 
     public PersonDTO update(PersonDTO person) {
+
+        if (person == null) {throw new RequiredObjectIsNullException();}
+
         logger.info("Updating one person");
 
         Person entity = repository.findById(person.getId()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
