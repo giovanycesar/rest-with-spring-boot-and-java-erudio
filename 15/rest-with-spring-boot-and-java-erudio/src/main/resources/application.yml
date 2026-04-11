@@ -17,3 +17,7 @@ logging:
   level:
     # root: WARN
     giovanycesar.com.github: DEBUG
+  spring-doc:
+    path-to-math: /api/**/v1/**
+    swagger-ui:
+      use-root-path: true
