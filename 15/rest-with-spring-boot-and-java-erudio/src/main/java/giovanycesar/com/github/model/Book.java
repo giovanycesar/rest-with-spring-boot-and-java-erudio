@@ -16,28 +16,29 @@ public class Book implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 80)
+    @Column(nullable = false, length = 180)
     private String author;
 
-    @Column(nullable = false)
-    private Date launch_date;
+    @Column(name = "launch_date", nullable = false)
+    @Temporal(TemporalType.DATE)
+    private Date launchDate;
 
     @Column(nullable = false)
     private Double price;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 250)
     private String title;
 
     public Book() {
 
     }
 
-    public Book(Long id, String title, Double price, Date launch_date, String author) {
+    public Book(Long id, String author, Date launchDate, Double price, String title) {
         this.id = id;
-        this.title = title;
-        this.price = price;
-        this.launch_date = launch_date;
         this.author = author;
+        this.launchDate = launchDate;
+        this.price = price;
+        this.title = title;
     }
 
     public Long getId() {
@@ -48,20 +49,20 @@ public class Book implements Serializable {
         this.id = id;
     }
 
-    public Date getLaunch_date() {
-        return launch_date;
-    }
-
-    public void setLaunch_date(Date launch_date) {
-        this.launch_date = launch_date;
-    }
-
     public String getAuthor() {
         return author;
     }
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Date getLaunchDate() {
+        return launchDate;
+    }
+
+    public void setLaunchDate(Date launchDate) {
+        this.launchDate = launchDate;
     }
 
     public Double getPrice() {
@@ -85,12 +86,12 @@ public class Book implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return Objects.equals(id, book.id) && Objects.equals(author, book.author) &&
-                Objects.equals(launch_date, book.launch_date) && Objects.equals(price, book.price) &&
+                Objects.equals(launchDate, book.launchDate) && Objects.equals(price, book.price) &&
                 Objects.equals(title, book.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, author, launch_date, price, title);
+        return Objects.hash(id, author, launchDate, price, title);
     }
 }

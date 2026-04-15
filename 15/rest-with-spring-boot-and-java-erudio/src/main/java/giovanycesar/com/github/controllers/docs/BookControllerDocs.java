@@ -1,7 +1,6 @@
 package giovanycesar.com.github.controllers.docs;
 
 import giovanycesar.com.github.data.dto.BookDTO;
-import giovanycesar.com.github.data.dto.PersonDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -16,7 +15,7 @@ import java.util.List;
 
 public interface BookControllerDocs {
 
-    @Operation(summary = "Find All Books", description = "Finds all books.", tags = {"Books"},
+    @Operation(summary = "Find All Books", description = "Finds all books.", tags = {"Book"},
             responses = {
                     @ApiResponse(description = "Success", responseCode = "200", content = {
                             @Content(
@@ -31,7 +30,7 @@ public interface BookControllerDocs {
             })
     List<BookDTO> findAll();
 
-    @Operation(summary = "Find a Book", description = "Finds a specific book by ID.", tags = {"Books"},
+    @Operation(summary = "Find a Book", description = "Finds a specific book by ID.", tags = {"Book"},
             responses = {
                     @ApiResponse(description = "Success", responseCode = "200", content =
                     @Content(schema = @Schema(implementation = BookDTO.class))
@@ -44,7 +43,7 @@ public interface BookControllerDocs {
             })
     BookDTO findById(@PathVariable("id") Long id);
 
-    @Operation(summary = "Add a new Book", description = "Adds a new book by passing in a JSON, XML or YAML representation of the person.", tags = {"Books"},
+    @Operation(summary = "Add a new Book", description = "Adds a new book by passing in a JSON, XML or YAML representation of the book.", tags = {"Book"},
             responses = {
                     @ApiResponse(description = "Success", responseCode = "200", content =
                     @Content(schema = @Schema(implementation = BookDTO.class))
@@ -57,7 +56,7 @@ public interface BookControllerDocs {
             })
     BookDTO create(@RequestBody BookDTO person);
 
-    @Operation(summary = "Update a Book", description = "Updates a book's information by passing in a JSON, XML or YAML representation of the updated person.", tags = {"Books"},
+    @Operation(summary = "Update a Book", description = "Updates a book's information by passing in a JSON, XML or YAML representation of the updated book.", tags = {"Book"},
             responses = {
                     @ApiResponse(description = "Success", responseCode = "200", content =
                     @Content(schema = @Schema(implementation = BookDTO.class))
@@ -70,7 +69,7 @@ public interface BookControllerDocs {
             })
     BookDTO update(@RequestBody BookDTO person);
 
-    @Operation(summary = "Delete a Book", description = "Delete a specific book by ID.", tags = {"Books"},
+    @Operation(summary = "Delete a Book", description = "Delete a specific book by ID.", tags = {"Book"},
             responses = {
                     @ApiResponse(description = "Success", responseCode = "200", content =
                     @Content(schema = @Schema(implementation = BookDTO.class))

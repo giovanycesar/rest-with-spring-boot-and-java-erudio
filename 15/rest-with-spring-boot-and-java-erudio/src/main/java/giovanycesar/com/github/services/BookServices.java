@@ -1,15 +1,11 @@
 package giovanycesar.com.github.services;
 
 import giovanycesar.com.github.controllers.BookController;
-import giovanycesar.com.github.controllers.PersonController;
 import giovanycesar.com.github.data.dto.BookDTO;
-import giovanycesar.com.github.data.dto.PersonDTO;
 import giovanycesar.com.github.exception.RequiredObjectIsNullException;
 import giovanycesar.com.github.exception.ResourceNotFoundException;
 import giovanycesar.com.github.model.Book;
-import giovanycesar.com.github.model.Person;
 import giovanycesar.com.github.repository.BookRepository;
-import giovanycesar.com.github.repository.PersonRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +75,7 @@ public class BookServices {
         entity.setAuthor(book.getAuthor());
         entity.setTitle(book.getTitle());
         entity.setPrice(book.getPrice());
-        entity.setLaunch_date(book.getLaunch_date());
+        entity.setLaunchDate(book.getLaunchDate());
 
         var dto = parseObject(repository.save(entity), BookDTO.class);
 

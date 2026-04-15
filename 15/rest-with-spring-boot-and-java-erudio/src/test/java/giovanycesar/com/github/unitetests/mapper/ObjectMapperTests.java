@@ -1,17 +1,16 @@
 package giovanycesar.com.github.unitetests.mapper;
 
-import static giovanycesar.com.github.mapper.ObjectMapper.parseListObjects;
-import static giovanycesar.com.github.mapper.ObjectMapper.parseObject;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.List;
-
 import giovanycesar.com.github.data.dto.PersonDTO;
+import giovanycesar.com.github.model.Person;
 import giovanycesar.com.github.unitetests.mapper.mocks.MockPerson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import giovanycesar.com.github.model.Person;
+import java.util.List;
+
+import static giovanycesar.com.github.mapper.ObjectMapper.parseListObjects;
+import static giovanycesar.com.github.mapper.ObjectMapper.parseObject;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ObjectMapperTests {
     MockPerson inputObject;

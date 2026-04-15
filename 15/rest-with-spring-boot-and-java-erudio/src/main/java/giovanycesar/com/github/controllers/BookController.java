@@ -1,12 +1,8 @@
 package giovanycesar.com.github.controllers;
 
 import giovanycesar.com.github.controllers.docs.BookControllerDocs;
-import giovanycesar.com.github.controllers.docs.PersonControllerDocs;
 import giovanycesar.com.github.data.dto.BookDTO;
-import giovanycesar.com.github.data.dto.PersonDTO;
-import giovanycesar.com.github.model.Book;
 import giovanycesar.com.github.services.BookServices;
-import giovanycesar.com.github.services.PersonServices;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
