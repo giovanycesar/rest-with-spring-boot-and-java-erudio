@@ -13,6 +13,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Date;
 
+// Handler: Responsible for intercepting and handling exceptions thrown by the application,
+// converting them into appropriate HTTP responses.
+
 @ControllerAdvice
 @RestController
 public class CustomEntityResponseHandler extends ResponseEntityExceptionHandler {
