@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+// implements Serializable permite que um objeto Java seja transformado em bytes quando alguma parte da aplicação precisar fazer isso.
+
 @Entity
 @Table(name = "person")
 public class Person implements Serializable {

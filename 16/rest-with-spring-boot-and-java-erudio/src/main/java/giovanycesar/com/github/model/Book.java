@@ -6,6 +6,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+// implements Serializable permite que um objeto Java seja transformado em bytes quando alguma parte da aplicação precisar fazer isso.
+
 @Entity
 @Table(name = "books")
 public class Book implements Serializable {
