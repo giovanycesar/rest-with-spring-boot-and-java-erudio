@@ -12,6 +12,8 @@ import static giovanycesar.com.github.mapper.ObjectMapper.parseListObjects;
 import static giovanycesar.com.github.mapper.ObjectMapper.parseObject;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+// ObjectMapperTests: Tests Entity and DTO object mapping using ObjectMapper.
+
 public class ObjectMapperTests {
     MockPerson inputObject;
 
@@ -69,7 +71,7 @@ public class ObjectMapperTests {
     }
 
     @Test
-    public void parserDTOListToEntityListTest() {
+    public void parseDTOListToEntityListTest() {
         List<Person> outputList = parseListObjects(inputObject.mockDTOList(), Person.class);
         Person outputZero = outputList.get(0);
 

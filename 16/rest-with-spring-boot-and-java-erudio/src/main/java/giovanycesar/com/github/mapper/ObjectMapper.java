@@ -6,6 +6,9 @@ import com.github.dozermapper.core.Mapper;
 import java.util.ArrayList;
 import java.util.List;
 
+// Dozer: A mapping library used to convert data between different Java objects,
+// such as Entities and DTOs.
+
 public class ObjectMapper {
 
     private static Mapper mapper = DozerBeanMapperBuilder.buildDefault();

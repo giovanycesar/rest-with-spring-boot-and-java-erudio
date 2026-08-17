@@ -70,7 +70,7 @@ public class ObjectMapperTests {
     }
 
     @Test
-    public void parserDTOListToEntityListTest() {
+    public void parseDTOListToEntityListTest() {
         List<Person> outputList = parseListObjects(inputObject.mockDTOList(), Person.class);
         Person outputZero = outputList.get(0);
 
