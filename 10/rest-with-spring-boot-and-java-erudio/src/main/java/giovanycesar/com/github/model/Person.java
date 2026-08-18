@@ -3,6 +3,7 @@ package giovanycesar.com.github.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -21,6 +22,9 @@ public class Person implements Serializable {
     @Column(name = "last_name", nullable = false, length = 80)
     private String lastName;
 
+    @Column(name = "birth_date", nullable = true)
+    private Date birthDate;
+
     @Column(nullable = false, length = 100)
     private String address;
 
@@ -31,12 +35,13 @@ public class Person implements Serializable {
 
     }
 
-    public Person(String address, Long id, String firstName, String lastName, String gender) {
+    public Person(String address, Long id, String firstName, String lastName, String gender, Date birthDate) {
         this.address = address;
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.birthDate = birthDate;
     }
 
     public Long getId() {
@@ -63,6 +68,14 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -82,11 +95,14 @@ public class Person implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Person person)) return false;
-        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getGender(), person.getGender());
+        return Objects.equals(id, person.id) && Objects.equals(firstName, person.firstName) &&
+                Objects.equals(lastName, person.lastName) &&
+                Objects.equals(birthDate, person.birthDate) &&
+                Objects.equals(address, person.address) && Objects.equals(gender, person.gender);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getAddress(), getGender());
+        return Objects.hash(id, firstName, lastName, birthDate, address, gender);
     }
 }

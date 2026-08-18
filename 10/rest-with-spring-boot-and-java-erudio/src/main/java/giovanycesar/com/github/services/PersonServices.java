@@ -34,12 +34,26 @@ public class PersonServices {
         return parseListObjects(repository.findAll(), PersonDTO.class);
     }
 
+    public List<PersonDTOV2> findAllV2() {
+        logger.info("Finding all.");
+
+        return parseListObjects(repository.findAll(), PersonDTOV2.class);
+    }
+
     public PersonDTO findById(Long id) {
         logger.info("Finding one person.");
 
         var entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
 
         return parseObject(entity, PersonDTO.class);
+    }
+
+    public PersonDTOV2 findByIdV2(Long id) {
+        logger.info("Finding one person V2.");
+
+        var entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+
+        return parseObject(entity, PersonDTOV2.class);
     }
 
 
@@ -54,9 +68,9 @@ public class PersonServices {
     public PersonDTOV2 createV2(PersonDTOV2 person) {
         logger.info("Creating one person V2");
 
-        var entity = converter.convertDTOtoEntity(person);
+        var entity = parseObject(person, Person.class);
 
-        return converter.convertEntityToDTO(repository.save(entity));
+        return parseObject(repository.save(entity), PersonDTOV2.class);
     }
 
     public PersonDTO update(PersonDTO person) {
@@ -70,6 +84,20 @@ public class PersonServices {
         entity.setGender(person.getGender());
 
         return parseObject(repository.save(entity), PersonDTO.class);
+    }
+
+    public PersonDTOV2 updateV2(PersonDTOV2 person) {
+        logger.info("Updating one person V2");
+
+        Person entity = repository.findById(person.getId()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+
+        entity.setFirstName(person.getFirstName());
+        entity.setLastName(person.getLastName());
+        entity.setBirthDate(person.getBirthDate());
+        entity.setAddress(person.getAddress());
+        entity.setGender(person.getGender());
+
+        return parseObject(repository.save(entity), PersonDTOV2.class);
     }
 
     public void delete(Long id) {

@@ -19,11 +19,12 @@ public class PersonDTOV2 implements Serializable {
 
     }
 
-    public PersonDTOV2(String address, Long id, String firstName, String lastName, String gender) {
-        this.address = address;
+    public PersonDTOV2(Long id, String firstName, String lastName, Date birthDate, String address, String gender) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.address = address;
         this.gender = gender;
     }
 
