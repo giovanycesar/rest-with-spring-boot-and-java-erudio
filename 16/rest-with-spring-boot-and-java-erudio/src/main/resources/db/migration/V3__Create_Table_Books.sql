@@ -1,4 +1,8 @@
-﻿CREATE TABLE IF NOT EXISTS `books` (
+﻿
+-- Flyway: manages database versioning and schema changes through migrations.
+-- Migrations: versioned SQL scripts executed in order to create or modify the database schema.
+
+CREATE TABLE IF NOT EXISTS `books` (
   `id` INT(10) AUTO_INCREMENT PRIMARY KEY,
   `author` longtext,
   `launch_date` datetime(6) NOT NULL,

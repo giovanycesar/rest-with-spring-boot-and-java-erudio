@@ -1,4 +1,7 @@
 
+-- Flyway: manages database versioning and schema changes through migrations.
+-- Migrations: versioned SQL scripts executed in order to create or modify the database schema.
+
 CREATE TABLE IF NOT EXISTS `person` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `first_name` varchar(80) NOT NULL,

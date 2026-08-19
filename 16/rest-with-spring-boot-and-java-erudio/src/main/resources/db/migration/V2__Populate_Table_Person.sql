@@ -1,4 +1,7 @@
 
+-- Flyway: manages database versioning and schema changes through migrations.
+-- Migrations: versioned SQL scripts executed in order to create or modify the database schema.
+
 INSERT INTO `person` (`id`, `address`, `first_name`, `gender`, `last_name`) VALUES
 	(1, 'São Paulo - Brazil', 'Ayrton', 'Male', 'Senna'),
 	(2, 'Fortaleza - CE', 'Giovany', 'Male', 'César de Almeida'),
