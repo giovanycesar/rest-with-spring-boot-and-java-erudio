@@ -15,6 +15,8 @@ import java.util.Objects;
 //import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 // @JsonPropertyOrder({ "id", "address", "first_name", "last_name", "gender" })
+
+// @JsonFilter Marks the class with a filter used by Jackson to control which fields are included during JSON serialization.
 @JsonFilter("PersonFilter")
 public class PersonDTO implements Serializable {
 

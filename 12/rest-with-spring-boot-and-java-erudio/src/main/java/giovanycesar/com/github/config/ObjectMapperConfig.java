@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// Configures Jackson's ObjectMapper to control JSON serialization, excluding sensitive fields from the response.
+
 @Configuration
 public class ObjectMapperConfig {
 
