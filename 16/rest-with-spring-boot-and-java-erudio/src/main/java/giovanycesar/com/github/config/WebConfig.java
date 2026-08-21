@@ -5,6 +5,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+// Configures Spring MVC content negotiation to support different response formats.
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
@@ -26,7 +28,7 @@ public class WebConfig implements WebMvcConfigurer {
 
          */
 
-        // Via Query Param _?mediaType=xml
+        // Via Header Param _
 
         configurer
                 .favorParameter(false)
